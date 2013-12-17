@@ -9,7 +9,20 @@ Luke Dary from the Research Triangle Google Developer's Group will be leading th
 
 We know that during a Startup Weekend event there isn't a lot of time to learn new things. You come in with the tools you have in your belt, and you do the best you can with those. But sometimes those tools aren't enough, which is why we're running this pre-Startup Weekend technical bootcamp:
 
-* 10:00 AM - 12:00 PM - Intro to AngularJS
-* 12:00 PM - 1:00 PM - Lunch
-* 1:00 PM - 3:00 PM - Advanced Topics
-* 3:00 PM - 5:00 PM - Hacking & Refreshments
+* *10:00 AM - 12:00 PM* - Intro to AngularJS
+* *12:00 PM - 1:00 PM* - Lunch
+* *1:00 PM - 3:00 PM* - Advanced Topics
+* *3:00 PM - 5:00 PM* - Hacking & Refreshments
+
+
+Technologies
+-------------
+
+* [AngularJS](http://www.angularjs.org/,"AngularJS Website")
+* [Bootstrap](http://getbootstrap.com/,"Bootstrap Website")
+* [Jasmine](http://pivotal.github.io/jasmine/,"Jasmine Website")
+* [Go](http://golang.org/,"Go Programming Language Website")
+
+
+APIs
+-----
