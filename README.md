@@ -1,7 +1,5 @@
-bootcamp-charlotte
-==================
-
-January 2014 Startup Weekend Bootcamp
+January 2014 Charlotte Startup Weekend Bootcamp
+=================================================
 
 Calling Charlotte's developers. If you've been wanting to find out about the buzz surrounding Single Page Apps, come to the AngularJS Bootcamp hosted by Charlotte Startup Weekend and sponsored by Google.
 
