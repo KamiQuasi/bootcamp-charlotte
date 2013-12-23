@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Intro to Angular JS</title>
+    <link rel="stylesheet" href="assets/global/css/libs/jasmine/2.0.0/jasmine.css">
+</head>
+<body ng-app="introApp">
+        
+    <div ng-controller="introCtrl">
+        <h1 ng-bind="title"></h1>
+    </div>
+    
+    <script src="assets/global/js/libs/jasmine/2.0.0/jasmine.js"></script>
+    <script src="assets/global/js/libs/jasmine/2.0.0/jasmine-html.js"></script>
+    <script src="assets/global/js/libs/jasmine/2.0.0/boot.js"></script>    
+    <script src="assets/global/js/libs/angular/1.2.5/angular.js"></script>
+    <script src="assets/global/js/libs/angular/1.2.5/angular-mocks.js"></script>
+    <script src="assets/global/js/libs/angular/1.2.5/angular-resource.js"></script>
+    <script src="assets/global/js/libs/angular/1.2.5/angular-loader.js"></script>
+    <script src="assets/global/js/libs/angular/1.2.5/angular-route.js"></script>
+    <script src="assets/global/js/libs/angular/1.2.5/angular-animate.js"></script>
+    <script>
+        (function() {
+            angular.module('introApp', [])
+                .controller('introCtrl', ['$scope', function($scope) {
+                    $scope.title = 'Intro to AngularJS';
+                }]);
+        }());
+    </script>
+    <script>
+        describe('AngularJS', function() {
+            it('should define an object named "angular"', function() {
+                expect(angular).toBeDefined();
+            });
+            
+            describe('Controllers', function() {
+                var introCtrl, $rootScope, $scope, $controller;
+                beforeEach(module('introApp'));
+                beforeEach(inject(function($injector) {
+                    $rootScope = $injector.get('$rootScope');
+                    $scope = $rootScope.$new();
+                    $controller = $injector.get('$controller');
+                }));
+                
+                describe('introCtrl', function() {
+                    beforeEach(function() {
+                        introCtrl = $controller('introCtrl', {$scope: $scope});
+                    });
+                    it('should exist', function() {
+                        expect(introCtrl).toBeDefined();
+                    });
+                    it('should have a title', function() {
+                        expect($scope.title).toBeDefined();
+                    });
+                    it('should have a title "Intro to Angular"', function() {
+                        expect($scope.title).toEqual('Intro to AngularJS');
+                    });
+                });
+            });
+            
+        });
+    </script>
+</body>
+</html>
