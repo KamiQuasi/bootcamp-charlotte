@@ -24,10 +24,12 @@ Technologies
 -------------
 
 * [AngularJS](http://www.angularjs.org/,"AngularJS Website")
+
+```
 * [Bootstrap](http://getbootstrap.com/,"Bootstrap Website")
 * [Jasmine](http://pivotal.github.io/jasmine/,"Jasmine Website")
 * [Go](http://golang.org/,"Go Programming Language Website")
-
+```
 
 APIs
 -----

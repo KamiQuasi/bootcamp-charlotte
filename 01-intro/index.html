@@ -11,16 +11,17 @@
             - Setup: include JS
             - Jargon: Directive (app, controller, 
     -->
-    <div ng-app="introApp">
-        <div ng-controller="introCtrl">
-            <h1 ng-bind="title"></h1>
-        </div>
+    <div>
+        {{1+2+'foo'}}
+    </div>
+    <div ng-app>
+        {{1+2+'foo'}}
     </div>
     
     <script type="text/javascript" src="https://apis.google.com/js/client.js"></script>
-    <script src="assets/global/js/libs/jasmine/2.0.0/jasmine.js"></script>
+    <!--<script src="assets/global/js/libs/jasmine/2.0.0/jasmine.js"></script>
     <script src="assets/global/js/libs/jasmine/2.0.0/jasmine-html.js"></script>
-    <script src="assets/global/js/libs/jasmine/2.0.0/boot.js"></script>    
+    <script src="assets/global/js/libs/jasmine/2.0.0/boot.js"></script>-->
     <script src="assets/global/js/libs/angular/1.2.5/angular.js"></script>
     <script src="assets/global/js/libs/angular/1.2.5/angular-mocks.js"></script>
     <!--<script src="assets/global/js/libs/angular/1.2.5/angular-resource.js"></script>
@@ -28,11 +29,8 @@
     <script src="assets/global/js/libs/angular/1.2.5/angular-route.js"></script>
     <script src="assets/global/js/libs/angular/1.2.5/angular-animate.js"></script>-->
     <script>
+        /*
         (function() {
-            var CLIENT_ID = '303095288572-4f0petgt3qglkhqqvqv0bjqnpaqs057t.apps.googleusercontent.com';
-            var SCOPES = 'https://www.googleapis.com/auth/urlshortener';
-            gapi.$broadcast(
-            
             angular.module('introApp', [])
                 .factory('gapi', function() {
                     return {
@@ -59,13 +57,15 @@
                     });
                 }]);
         }());
+        */
     </script>
     <script>
+        /*
         describe('AngularJS', function() {
             it('should define an object named "angular"', function() {
                 expect(angular).toBeDefined();
             });
-            /*
+           
             describe('Controllers', function() {
                 var introCtrl, $rootScope, $scope, $controller;
                 beforeEach(module('introApp'));
@@ -90,9 +90,8 @@
                     });
                 });
             });
-            */
-            
         });
+        */
     </script>
 </body>
 </html>
