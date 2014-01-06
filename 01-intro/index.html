@@ -3,95 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Intro to Angular JS</title>
-    <link rel="stylesheet" href="assets/global/css/libs/jasmine/2.0.0/jasmine.css">
 </head>
 <body>
-    <!--
-        TODO:
-            - Setup: include JS
-            - Jargon: Directive (app, controller, 
-    -->
-    <div>
-        {{1+2+'foo'}}
-    </div>
-    <div ng-app>
-        {{1+2+'foo'}}
-    </div>
     
-    <script type="text/javascript" src="https://apis.google.com/js/client.js"></script>
-    <!--<script src="assets/global/js/libs/jasmine/2.0.0/jasmine.js"></script>
-    <script src="assets/global/js/libs/jasmine/2.0.0/jasmine-html.js"></script>
-    <script src="assets/global/js/libs/jasmine/2.0.0/boot.js"></script>-->
-    <script src="assets/global/js/libs/angular/1.2.5/angular.js"></script>
-    <script src="assets/global/js/libs/angular/1.2.5/angular-mocks.js"></script>
-    <!--<script src="assets/global/js/libs/angular/1.2.5/angular-resource.js"></script>
-    <script src="assets/global/js/libs/angular/1.2.5/angular-loader.js"></script>
-    <script src="assets/global/js/libs/angular/1.2.5/angular-route.js"></script>
-    <script src="assets/global/js/libs/angular/1.2.5/angular-animate.js"></script>-->
+    <script src="assets/global/js/libs/angular/1.2.7/angular.js"></script>
     <script>
-        /*
-        (function() {
-            angular.module('introApp', [])
-                .factory('gapi', function() {
-                    return {
-                        authorize: function(callback) {
-                            //gapi.auth.authorize({client_id: CLIENT_ID, scope: SCOPES, immediate: true}, handleAuthResult);
-                            gapi.auth.authorize({client_id: '303095288572-4f0petgt3qglkhqqvqv0bjqnpaqs057t.apps.googleusercontent.com', scope: 'https://www.googleapis.com/auth/urlshortener', immediate: true}, callback);
-                            return false;
-                        }
-                    };
-                })
-                .controller('introCtrl', ['$scope', 'gapi', function($scope, gapi) {
-                    $scope.title = 'Intro to AngularJS';
-                    $scope.auth = function() {
-                        gapi.authorize(function(result) { $scope.auth =
-                    };
-                    
-                    // Invoke on ctor call. Fetch docs after we have the oauth token.
-                    gapi.authorize(function(authResult) {
-                      if(authResult && !authResult.error) {
-                      
-                      } else {
-                      
-                      }
-                    });
-                }]);
-        }());
-        */
-    </script>
-    <script>
-        /*
-        describe('AngularJS', function() {
-            it('should define an object named "angular"', function() {
-                expect(angular).toBeDefined();
-            });
-           
-            describe('Controllers', function() {
-                var introCtrl, $rootScope, $scope, $controller;
-                beforeEach(module('introApp'));
-                beforeEach(inject(function($injector) {
-                    $rootScope = $injector.get('$rootScope');
-                    $scope = $rootScope.$new();
-                    $controller = $injector.get('$controller');
-                }));
-                
-                describe('introCtrl', function() {
-                    beforeEach(function() {
-                        introCtrl = $controller('introCtrl', {$scope: $scope});
-                    });
-                    it('should exist', function() {
-                        expect(introCtrl).toBeDefined();
-                    });
-                    it('should have a title', function() {
-                        expect($scope.title).toBeDefined();
-                    });
-                    it('should have a title "Intro to Angular"', function() {
-                        expect($scope.title).toEqual('Intro to AngularJS');
-                    });
-                });
-            });
-        });
-        */
+        
     </script>
 </body>
 </html>
