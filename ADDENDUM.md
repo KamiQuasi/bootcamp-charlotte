@@ -4,7 +4,7 @@ Additional Resources, Libraries, and Miscellany
 Libraries/Utilities
 --------------------
 
-* http://angularjs.org - 
+* http://angularjs.org - Superheroic Javascript MVW Framework
 * http://lodash.com - JS Utility library
 * http://jquery.com - JS library
 * http://bestiejs.github.io/json3/ - JSON implementation

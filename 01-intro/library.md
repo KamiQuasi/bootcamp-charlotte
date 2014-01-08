@@ -29,8 +29,8 @@ Core Module (angular.js)
 * [Global APIs](http://docs.angularjs.org/api/ng#function)
 
 
-Key Modules
-------------
+Additional Modules
+-------------------
 
 * [ngRoute](http://docs.angularjs.org/api/ngRoute) (angular-route.js)
     
@@ -38,24 +38,17 @@ Key Modules
     * $route
     * $routeProvider
     * ng-view
-    
+
+* [ngResource](http://docs.angularjs.org/api/ngResource) (angular-resource.js)
+
+    * $resource
+
 * [ngAnimate](http://docs.angularjs.org/api/ngAnimate) (angular-animate.js)
 
     * $animate
     * CSS animations
     * JS animations
-    
-* [ngResource](http://docs.angularjs.org/api/ngResource) (angular-resource.js)
-
-    * $resource
 
 * [ngTouch](http://docs.angularjs.org/api/ngTouch) (angular-touch.js)
 * [ngSanitize](http://docs.angularjs.org/api/ngSanitize) (angular-sanitize.js)
 * [ngMock](http://docs.angularjs.org/api/ngMock) (angular-mocks.js)
-
-
-```js
-(function() {
-	angular.module('myApp', []);
-}())
-```
