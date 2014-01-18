@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hero Finder</title>
+</head>
+<body ng-app="herofinder">
+    <h1>Hero Finder</h1>
+    <div ng-controller="HeroCtrl">
+        <label>Search: <input ng-model="query"></label>
+        <ul>
+            <li ng-repeat="hero in heroes | filter:query">
+                Name: <span ng-bind="hero.name"></span><br>
+                Power: <span ng-bind="hero.power"></span>
+            </li>
+        </ul>
+    </div>
+    
+    <script src="assets/global/js/libs/angular/1.2.8/angular.js"></script>
+    <script src="assets/global/js/libs/angular/1.2.8/angular-route.js"></script>
+    <script src="assets/global/js/libs/angular/1.2.8/angular-resource.js"></script>
+    <script>
+        (function() {
+            var app = angular.module('herofinder', 
+                ['ngRoute', 'ngResource']);
+            
+            app.factory('HeroList', function() { 
+                return {
+                    heroes: [
+                        {name:'Thor', power:'Lightning'},
+                        {name:'Hulk', power:'Strength'},
+                        {name:'Captain America', power:'Strength'}]
+                }
+            });
+            
+            app.controller('HeroCtrl', 
+                function($scope, HeroList) {
+                    $scope.heroes = HeroList.heroes;
+            });
+            
+            app.controller('VillainCtrl', 
+                function($scope, HeroList) {
+                    $scope.query = HeroList.query;
+                    
+            });
+            
+        }());
+    </script>
+</body>
+</html>

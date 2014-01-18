@@ -35,22 +35,23 @@
                 };
             });
             */
-            function($resource) {
-		    		return $resource('/search/:letter', {}, {
-		    			query: {params:{letter:'A'}},
-		    			get: { isArray:true }
-		    		});
-		    	}
+            
             // Create a factory
             app.factory('heroes', function($resource) {
-                return $resource('/services/:heroid.json', {}, {
+                return $resource('services/:heroid.json', {}, {
                         query: {params:{heroid:'heroes'}}
                     });
             });
             
-            app.controller('HeroListCtrl', ['$scope', 'heroes', 'appName',
+            app.factory('SuperHeroes', function($http) {
+                return function() {
+                    $http.get('services/heroes.json');
+                };
+            });
+            
+            app.controller('HeroListCtrl', ['$scope', 'SuperHeroes', 'appName', 
                 function($scope, heroes){
-                    $scope.heroes = heroes.query();
+                    $scope.heroes = heroes();
                     
             }]);
             app.controller('HeroCtrl', ['$scope',
