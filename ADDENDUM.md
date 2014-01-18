@@ -18,6 +18,9 @@ Libraries/Utilities
 Resources
 ----------
 
+* http://javascriptweekly.com/ - Javascript Weekly Newsletter
+* http://www.ng-newsletter.com/ - Angular Weekly Newsletter
+* http://www.html5rocks.com/en/ - Web Developer Resource
 * https://developers.google.com/startups/ - startup resource for Google tech
 * https://cloud.google.com/ - Google Cloud platform
 * https://developers.google.com/fusiontables/docs/v1/using - Google Fusion Tables API Docs

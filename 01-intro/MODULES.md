@@ -12,7 +12,7 @@ Core Module (angular.js)
         2. Convert `:`,`-`, or `_` delimited name to `camelCase`
         3. Prefer _tag name_ or _attribute_
         
-    * Notable Tags: a, form, input, select, textarea
+    * Notable Tags: a, form, [input](http://docs.angularjs.org/api/ng.directive:input), select, textarea
     * Notable Attributes: ng-app, ng-bind, ng-change, ng-class(-even/-odd), 
         ng-click, ng-cloak, ng-controller, ng-hide, ng-href, ng-include, ng-init, 
         ng-model, ng-repeat, ng-selected, ng-show, ng-transclude, ng-value
@@ -23,10 +23,12 @@ Core Module (angular.js)
     
 * [Filters](http://docs.angularjs.org/api/ng#filter)
 
-    * Notable (angular object): .forEach, .is(Array, Date, Defined, Number), .module, .toJson
-    * Notable (ng object): $controller, $filter, $http, limitTo, orderBy
+    * currency, date, filter, json, lowercase, number, uppercase    
 
 * [Global APIs](http://docs.angularjs.org/api/ng#function)
+
+    * Notable (angular object): .forEach, .is(Array, Date, Defined, Number), .module, .toJson
+    * Notable (ng object): $controller, $filter, $http, limitTo, orderBy
 
 
 Additional Modules

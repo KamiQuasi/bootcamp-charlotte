@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Intro to Angular JS</title>
-    <link rel="stylesheet" href="assets/global/css/libs/bootstrap/3.0.3/bootstrap.min.css">
 </head>
-<body class="container">
+<body ng-app="myHeroes">
     <h1>AngularJS: Introduction</h1>
     <!--
     TODO:
+    ng-bind, ng-hide, ng-show, ng-init, ng-model, input
     * Core and Additional Modules
     * Scoping (Directives: ngApp, ngController)
     * Models and Binding
@@ -20,10 +20,12 @@
     -->
     <!--SCRIPTS-->
     <script src="assets/global/js/libs/angular/1.2.8/angular.js"></script>
-    <script src="assets/global/js/libs/angular/1.2.8/angular-resource.js"></script>
-    <script src="assets/global/js/libs/angular/1.2.8/angular-route.js"></script>
     <script>
-        
+        (function() {
+            // Create
+            var app = angular.module('app', []);
+                
+        }())
     </script>
 </body>
 </html>
