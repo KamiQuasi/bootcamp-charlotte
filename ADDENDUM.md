@@ -18,6 +18,7 @@ Libraries/Utilities
 Resources
 ----------
 
+* https://www.youtube.com/user/ngconfvideos - ng-conf videos
 * http://javascriptweekly.com/ - Javascript Weekly Newsletter
 * http://www.ng-newsletter.com/ - Angular Weekly Newsletter
 * http://www.html5rocks.com/en/ - Web Developer Resource
