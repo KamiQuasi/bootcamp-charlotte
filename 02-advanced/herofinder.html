@@ -6,30 +6,39 @@
 </head>
 <body ng-app="herofinder">
     <h1>Hero Finder</h1>
-    <div ng-controller="HeroCtrl">
-        <label>Search: <input ng-model="query"></label>
-        <ul>
-            <li ng-repeat="hero in heroes | filter:query">
-                Name: <span ng-bind="hero.name"></span><br>
-                Power: <span ng-bind="hero.power"></span>
-            </li>
-        </ul>
-    </div>
+    <ng-view></ng-view>
     
     <script src="assets/global/js/libs/angular/1.2.8/angular.js"></script>
     <script src="assets/global/js/libs/angular/1.2.8/angular-route.js"></script>
     <script src="assets/global/js/libs/angular/1.2.8/angular-resource.js"></script>
     <script>
         (function() {
-            var app = angular.module('herofinder', 
-                ['ngRoute', 'ngResource']);
+        var app = angular.module('herofinder', 
+            ['ngRoute', 'ngResource'])
+            .directive('swHero', function() {
+                return {
+                    restrict: 'E',
+                    template: '{{name}}'
+                };
+            });
+            
+            app.config(function($routeProvider) {
+                $routeProvider.when('/', {
+                    templateUrl: 'heroes.html',
+                    controller: 'HeroCtrl'
+                }).when('/hero/:code', {
+                    templateUrl: 'hero-details.html',
+                    controller: 'HeroDetailCtrl'
+                }).otherwise({redirectTo: '/'});
+            });
+            
             
             app.factory('HeroList', function() { 
                 return {
                     heroes: [
-                        {name:'Thor', power:'Lightning'},
-                        {name:'Hulk', power:'Strength'},
-                        {name:'Captain America', power:'Strength'}]
+                        {code: 'thr',name:'Thor', power:'Lightning'},
+                        {code: 'hlk', name:'Hulk', power:'Strength'},
+                        {code: 'cap', name:'Captain America', power:'Strength'}]
                 }
             });
             
@@ -38,10 +47,13 @@
                     $scope.heroes = HeroList.heroes;
             });
             
-            app.controller('VillainCtrl', 
-                function($scope, HeroList) {
-                    $scope.query = HeroList.query;
-                    
+            app.controller('HeroDetailCtrl', 
+                function($scope, $routeParams, $filter, HeroList) {
+                    $scope.heroCode = $routeParams.code;
+                    $scope.hero = $filter('filter')(HeroList.heroes,
+                        function(obj) { 
+                            return obj.code == $scope.heroCode;
+                        })[0];
             });
             
         }());

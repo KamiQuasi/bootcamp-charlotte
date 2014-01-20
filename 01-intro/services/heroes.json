@@ -1,1 +1,1 @@
-[{name:'Thor'},{name:'Captain America'}]
+[{"id":1,"name":"Captain America","power":"Strength"},{"id":2,"name":"Thor","power":"Lightning"},{"id":3,"name":"Iron Man","power":"Repulsor Blasts"}]

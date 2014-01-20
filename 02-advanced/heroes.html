@@ -1,0 +1,8 @@
+<h2>List o' Heroes</h2>
+<label>Search: <input ng-model="query"></label>
+<ul>
+    <li ng-repeat="hero in heroes | filter:query">
+        Name: <a ng-href="#/hero/{{hero.code}}" ng-bind="hero.name"></a><br>
+        Power: <span ng-bind="hero.power"></span>
+    </li>
+</ul>

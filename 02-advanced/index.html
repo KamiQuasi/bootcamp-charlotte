@@ -48,7 +48,7 @@
     }
     </style>
 </head>
-<body ng-app="advHeroics">
+<body ng-app>
     <h1>AngularJS: Advanced Topics</h1>
     <div ng-init="checked=true">
       <label>
@@ -78,53 +78,7 @@
     <script src="assets/global/js/libs/angular/1.2.8/angular-resource.js"></script>
     <script src="assets/global/js/libs/angular/1.2.8/angular-route.js"></script>
     <script>
-        (function() {
-            // Create the module
-            var app = angular.module('myHero', ['ngRoute', 'ngResource']);
-            
-            app.constant('appName', 'Hero Finder');
-            
-            app.config(function($routeProvider) {
-                $routeProvider.when('/', {
-                templateUrl: 'heroes.html',
-                controller: 'HeroListCtrl'});
-                $routeProvider.when('/hero/:id', { 
-                templateUrl: 'hero-details.html',
-                controller: 'HeroCtrl'});
-                $routeProvider.otherwise({redirectTo:'/'})
-            });
-            
-            // Create a filter
-            /*
-            app.filter('superduper', function() {
-                return function(val) {
-                    return val+''+val;
-                };
-            });
-            */
-            function($resource) {
-		    		return $resource('/search/:letter', {}, {
-		    			query: {params:{letter:'A'}},
-		    			get: { isArray:true }
-		    		});
-		    	}
-            // Create a factory
-            app.factory('heroes', function($resource) {
-                return $resource('/services/:heroid.json', {}, {
-                        query: {params:{heroid:'heroes'}}
-                    });
-            });
-            
-            app.controller('HeroListCtrl', ['$scope', 'heroes', 'appName',
-                function($scope, heroes){
-                    $scope.heroes = heroes.query();
-                    
-            }]);
-            app.controller('HeroCtrl', ['$scope',
-                function($scope){
-                    $scope.name = 'Legend';
-            }]);
-        }())
+        
     </script>
 </body>
 </html>

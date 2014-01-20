@@ -1,4 +1,8 @@
 <h2>List o' Heroes</h2>
-<div ng-repeat="hero in heroes">
-    <strong ng-bind="hero.name"></strong>
-</div>
+<label>Search: <input type="text" ng-model="search"></label>
+<ul>
+    <li ng-repeat="hero in heroes | filter:search">
+        <a ng-bind="hero.name" ng-href="#/hero/{{hero.id}}"></a>
+    </li>
+</ul>
+<div ng-bind="'Super' | superduper"></div>
